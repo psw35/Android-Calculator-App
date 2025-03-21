@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_black"
+    tools:context=".MainActivity">
+
+    <!-- constraint layout for text views -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="20dp">
+
+        <!-- workingText- will hold our digits and operations before evaluating them -->
+        <TextView
+            android:id="@+id/workingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/resultsText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- resultsText- will hold the results of our workingText calculations -->
+        <TextView
+            android:id="@+id/resultsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- below are the button rows, using linear layouts and button views -->
+    <!-- each button gets it's own id -->
+    <LinearLayout
+        style="@style/row">
+
+        <Button
+            style="@style/opButton"
+            android:id="@+id/acButton"
+            android:textColor="@color/white"
+            android:text="@string/all_clear"/>
+
+        <Button
+            style="@style/opButton"
+            android:id="@+id/cButton"
+            android:textColor="@color/white"
+            android:text="@string/clear"/>
+
+        <Button
+            style="@style/opButton"
+            android:id="@+id/squareButton"
+            android:text="@string/square"/>
+
+        <Button
+            style="@style/opButton"
+            android:id="@+id/sqrtButton"
+            android:text="@string/sqrt"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/row">
+        
+        <Button
+            style="@style/numButton"
+            android:id="@+id/button7"
+            android:text="@string/num7"/>
+
+        <Button
+            style="@style/numButton"
+            android:id="@+id/button8"
+            android:text="@string/num8"/>
+
+        <Button
+            style="@style/numButton"
+            android:id="@+id/button9"
+            android:text="@string/num9"/>
+
+        <Button
+            style="@style/opButton"
+            android:id="@+id/divButton"
+            android:text="@string/divide"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/row">
+
+        <Button
+            style="@style/numButton"
+            android:id="@+id/button4"
+            android:text="@string/num4"/>
+
+        <Button
+            style="@style/numButton"
+            android:id="@+id/button5"
+            android:text="@string/num5"/>
+
+        <Button
+            style="@style/numButton"
+            android:id="@+id/button6"
+            android:text="@string/num6"/>
+
+        <Button
+            style="@style/opButton"
+            android:id="@+id/multButton"
+            android:text="@string/multiply"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/row">
+
+        <Button
+            style="@style/numButton"
+            android:id="@+id/button1"
+            android:text="@string/num1"/>
+
+        <Button
+            style="@style/numButton"
+            android:id="@+id/button2"
+            android:text="@string/num2"/>
+
+        <Button
+            style="@style/numButton"
+            android:id="@+id/button3"
+            android:text="@string/num3"/>
+
+        <Button
+            style="@style/opButton"
+            android:id="@+id/subButton"
+            android:text="@string/sub"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/row">
+
+        <Button
+            style="@style/numButton"
+            android:id="@+id/button0"
+            android:text="@string/num0"/>
+
+        <Button
+            style="@style/numButton"
+            android:id="@+id/decButton"
+            android:text="@string/decimal"/>
+
+        <Button
+            style="@style/opButton"
+            android:textColor="@color/white"
+            android:id="@+id/equalsButton"
+            android:text="@string/equals"/>
+        <Button
+            style="@style/opButton"
+            android:id="@+id/addButton"
+            android:text="@string/add"/>
+
+    </LinearLayout>
+
+</LinearLayout>
